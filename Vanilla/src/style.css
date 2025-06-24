@@ -1,7 +1,55 @@
 @import "tailwindcss";
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
-  --color-sky-100:yellow;
+  --color-sky-100: yellow;
+}
+@layer base {
+  /* add style for specific html elemt */
+  h1 {
+    font-size: var(--text-2xl);
+  }
+  h2 {
+    color: var(--color-mint-500);
+  }
+}
+@layer components {
+  /* 
+  add style for specific html elemt 
+  Traditionally these would be classes like card, btn, badge — that kind of thing.
+  */
+  .card {
+    background-color: var(--color-white);
+    color: var(--color-gray-800);
+    padding: var(--spacing-6);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    /* using variant */
+    @variant dark {
+      background-color: var(--color-gray-500);
+    }
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-xl);
+  }
+
+  .card h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: var(--spacing-2);
+    color: var(--color-gray-900);
+    
+  }
+
+  .card p {
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+  }
+}
+@utility content-auto {
+  /* Adding custom utilities */
+  content-visibility: auto;
 }
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -41,10 +89,11 @@ h1 {
 }
 
 #app {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: var(--color-mint-500);
 }
 
 .logo {
@@ -69,17 +118,17 @@ h1 {
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+  /* border-radius: 8px; */
+  /* border: 1px solid transparent; */
+  /* padding: 0.6em 1.2em; */
+  /* font-size: 1em; */
+  /* font-weight: 500; */
+  /* font-family: inherit; */
+  /* background-color: #1a1a1a; */
   cursor: pointer;
-  transition: border-color 0.25s;
+  /* transition: border-color 0.25s; */
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
@@ -98,4 +147,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
