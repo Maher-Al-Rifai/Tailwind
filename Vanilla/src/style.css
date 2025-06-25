@@ -2,6 +2,7 @@
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
   --color-sky-100: yellow;
+  /* --spacing:1rem; */
 }
 @layer base {
   /* add style for specific html elemt */
@@ -9,7 +10,10 @@
     font-size: var(--text-2xl);
   }
   h2 {
-    color: var(--color-mint-500);
+    color: var(--color-sky-950);
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-bold);
+    text-align: start;
   }
 }
 @layer components {
@@ -18,7 +22,7 @@
   Traditionally these would be classes like card, btn, badge — that kind of thing.
   */
   .card {
-    background-color: var(--color-white);
+    background-color: var(--color-sky-200);
     color: var(--color-gray-800);
     padding: var(--spacing-6);
     border-radius: var(--radius-lg);
@@ -56,9 +60,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light dark; */
+  /* color: rgba(255, 255, 255, 0.87); */
+  /* background-color: #242424; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -77,8 +81,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  /* display: flex;
+  place-items: center; */
   min-width: 320px;
   min-height: 100vh;
 }
@@ -93,7 +97,7 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: var(--color-mint-500);
+  background-color: white;
 }
 
 .logo {

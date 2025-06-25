@@ -4,85 +4,82 @@ import viteLogo from "/vite.svg";
 import { setupCounter } from "./counter.ts";
 
 document.querySelector<HTMLDivElement>("#app")!.innerHTML = `
-  <div class=" w-100 flex flex-row justify-center items-center">
-    <a href="https://vite.dev" target="_blank" class="">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    </div>
-    <div>
-    <h1 class="text-red-800 my-2 bg-amber-500">Vite + TypeScript</h1>
-    <div class="my-5">
-      <button class=" cursor-pointer text-mint-500 bg-black px-4 py-3 rounded-xl" id="counter" type="button"></button>
+<h2 class="my-5">Flex Row:</h2>
+  <div class="flex flex-row space-x-5 text-white ">
+  <div class="p-5 bg-sky-500 rounded-xl">01</div>
+  <div class="p-5 bg-sky-600 rounded-xl">02</div>
+  <div class="p-5 bg-sky-700 rounded-xl">03</div>
+  <div class="p-5 bg-sky-800 rounded-xl">04</div>
+  <div class="p-5 bg-sky-900 rounded-xl">05</div>
 </div>
-    <p class="read-the-docs bg-sky-100 m-8">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-    <h2 class="animate-bounce">test test</h2>
-    <div class="card max-w-sm mx-auto my-10">
-    <h3>🌌 Tailwind V4 Card</h3>
-    <p>This card is styled using Tailwind's design tokens with CSS variables.</p>
+<h2 class="my-5">Flex-end Row Reverse:</h2>
+<div class="flex flex-row-reverse space-x-reverse space-x-5 text-white ">
+<div class="p-5 bg-sky-500 rounded-xl">01</div>
+<div class="p-5 bg-sky-600 rounded-xl">02</div>
+<div class="p-5 bg-sky-700 rounded-xl">03</div>
+<div class="p-5 bg-sky-800 rounded-xl">04</div>
+<div class="p-5 bg-sky-900 rounded-xl">05</div>
+</div>
+<h2 class="my-5">Flex-center Row:</h2>
+<div class="flex flex-row justify-center space-x-5 text-white">
+<div class="p-5 bg-sky-500 rounded-xl">01</div>
+<div class="p-5 bg-sky-600 rounded-xl">02</div>
+<div class="p-5 bg-sky-700 rounded-xl">03</div>
+<div class="p-5 bg-sky-800 rounded-xl">04</div>
+<div class="p-5 bg-sky-900 rounded-xl">05</div>
+</div>
+<h2 class="my-5">basis-grow shrink</h2>
+<div class="flex flex-row space-x-5 text-white ">
+<div class="p-5 bg-sky-500 rounded-xl">01</div>
+<div class="p-5 w-[200px] bg-sky-600 shrink-1 rounded-xl">flex shrink</div>
+<div class="p-5 bg-sky-700 basis-md rounded-xl">basis md</div>
+<div class="p-5 bg-sky-800 grow-1 rounded-xl">flex grow</div>
+<div class="p-5 bg-sky-900 rounded-xl">05</div>
+</div>
+<br/><br/>
+<h2 class="my-5">grid col</h2>
+<div class="grid grid-cols-6 gap-4">
+  <div class="col-span-4 col-start-2 p-5 bg-red-300">01</div>
+  <div class="col-start-1 col-end-3 p-5 bg-red-300">02</div>
+  <div class="col-span-2 col-end-7 p-5 bg-red-300">03</div>
+  <div class="col-start-1 col-end-7 p-5 bg-red-300">04</div>
+</div>
+<h2 class="my-5">grid row</h2>
+<div class="grid grid-flow-col grid-rows-3 gap-4">
+  <div class="row-span-3 bg-green-600 p-5">row span 3</div>
+  <div class="col-span-2 bg-green-600 p-5">col span 2</div>
+  <div class="col-span-2 row-span-2 bg-green-600 p-5">col-span-2 row-span-2</div>
+</div>
+<h2 class="my-5">grid gallery</h2>
+<div class=" p-10 flex items-center justify-center">
+  <div class="grid grid-cols-3 gap-6 max-w-6xl w-full place-items-center">
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-pink-200 to-pink-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      1
     </div>
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-blue-200 to-blue-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      2
+    </div>
+
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-green-200 to-green-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      3
+    </div>
+
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-purple-200 to-purple-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      4
+    </div>
+
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-yellow-200 to-yellow-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      5
+    </div>
+
+    <div class="w-full h-40 rounded-xl bg-gradient-to-br from-teal-200 to-teal-400 text-white flex items-center justify-center text-3xl font-bold shadow hover:scale-105 transition-transform">
+      6
+    </div>
+
   </div>
-
-    <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white mb-2">
-      🚀 The Future of Frontend: Tailwind and Beyond
-    </h1>
-    <div class="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-      <img src="https://i.pravatar.cc/40" alt="Author" class="w-10 h-10 rounded-full" />
-      <div>
-        <p class="font-medium">Maher Al Rifai</p>
-        <p>June 23, 2025 · 5 min read</p>
-      </div>
-    </div>
-
-
-  <!-- Content -->
-  <section class="space-y-6 leading-relaxed text-lg">
-    <p>
-      Frontend development is evolving fast. With tools like <span class="font-semibold text-blue-600 dark:text-blue-400">Tailwind CSS</span>, developers can create sleek, responsive designs without writing a single line of custom CSS.
-    </p>
-
-    <h2 class="text-2xl font-semibold border-l-4 pl-4 border-blue-500 dark:border-blue-400">
-      🔥 Why Tailwind?
-    </h2>
-    <p>
-      Tailwind’s utility-first approach allows for rapid development with consistent design patterns. It encourages component-based thinking and helps you stay in the flow.
-    </p>
-
-    <blockquote class="border-l-4 pl-4 italic text-gray-600 dark:text-gray-400 border-gray-300 dark:border-gray-700">
-      “Tailwind is not just a CSS framework — it’s a mindset.”
-    </blockquote>
-
-    <h2 class="text-2xl font-semibold border-l-4 pl-4 border-purple-500 dark:border-purple-400">
-      🛠 Features You’ll Love
-    </h2>
-    <ul class="list-disc list-inside space-y-1 text-gray-700 dark:text-gray-300">
-      <li>Built-in responsive utilities</li>
-      <li>Dark mode ready</li>
-      <li>Custom themes and tokens</li>
-      <li>Just-in-Time compiler for performance</li>
-    </ul>
-
-    <div class="mt-6 flex flex-wrap gap-3">
-      <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition">
-        💡 Learn More
-      </button>
-      <button class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg font-medium border border-gray-300 dark:border-gray-600 transition">
-        ⭐ Star on GitHub
-      </button>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="mt-10 pt-6 border-t border-gray-300 dark:border-gray-700 text-sm flex justify-between items-center">
-    <p>© 2025 Maher Al Rifai</p>
-    <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Read More Articles →</a>
-  </footer>
-
-
+</div>
+<h1 class="my-7 text-teal-600 font-black">Bckground Image</h1>
+<div class="bg-[url(https://raw.githubusercontent.com/creativetimofficial/public-assets/master/twcomponents/tailwind-gradient-generator-thumbnail.webp)] bg-top bg-no-repeat bg-contain w-full h-screen"></div>
 
 `;
 
